@@ -4,8 +4,21 @@
              xmlns:local="clr-namespace:DemoCamera"
              x:Class="DemoCamera.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+    <StackLayout>
+        <Label Text="Welcome to Xamarin Forms!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
+
+        <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" />
+
+        <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" />
+
+        <Button Text="Gravar Video" Clicked="GravarVideo" FontSize="20" />
+
+        <Button Text="Escolher Video" Clicked="EscolherVideo" FontSize="20" />
+
+        <Image x:Name="MinhaImagem" />
+        
+    </StackLayout>
 
 </ContentPage>
