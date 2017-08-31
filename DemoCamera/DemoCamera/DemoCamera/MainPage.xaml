@@ -5,10 +5,7 @@
              x:Class="DemoCamera.MainPage">
 
     <StackLayout>
-        <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+        
         <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" />
 
         <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" />
