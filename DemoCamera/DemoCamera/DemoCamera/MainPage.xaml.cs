@@ -1,28 +1,29 @@
-﻿using Plugin.Media;
-using Plugin.Media.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using Xamarin.Forms;
 
 namespace DemoCamera
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+	public partial class MainPage : ContentPage
+	{
+		public MainPage()
+		{
+			InitializeComponent();
+		}
 
-        private async void  TirarFoto(object sender, EventArgs e)
+
+        private async void TirarFoto(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.Current.IsCameraAvailable)
             {
-                await DisplayAlert("Ops" , "Nenhuma câmera detectada.", "OK");
+                await DisplayAlert("Ops", "Nenhuma câmera detectada.", "OK");
 
                 return;
             }
